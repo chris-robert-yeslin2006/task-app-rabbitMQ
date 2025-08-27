@@ -12,6 +12,7 @@
 
 <p align="center">
   <em>Modular, scalable task management with Node.js microservices, MongoDB, RabbitMQ messaging, and Docker containerization.</em>
+  <em>DockerHub image:sha256:1b8e3656cdfb6d905ed5c7816399729150d6c73a77e15707a2104337a1874a71</em>
 </p>
 
 ---
