@@ -1,6 +1,16 @@
 # 🚀 Task-App – Microservices Task Management
 
 <p align="center">
+  <a href="https://github.com/yeslinparker/task-app" target="_blank">
+    <img src="https://img.shields.io/badge/Live-Demo-success?style=for-the-badge&logo=vercel" />
+  </a>
+  <img src="https://img.shields.io/badge/Backend-Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Database-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
+  <img src="https://img.shields.io/badge/Messaging-RabbitMQ-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white" />
+  <img src="https://img.shields.io/badge/Container-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+</p>
+
+<p align="center">
   <em>Modular, scalable task management with Node.js microservices, MongoDB, RabbitMQ messaging, and Docker containerization.</em>
 </p>
 
@@ -50,57 +60,49 @@ This architecture emphasizes **scalability**, **decoupling**, and **resilience**
 
 ### Clone the repository
 
+```sh
 git clone https://github.com/yeslinparker/task-app.git
 cd task-app
-
-text
-
-### Build and run services
-
+Build and run services
+sh
+Copy
+Edit
 docker-compose build
 docker-compose up
-
-text
-
 This will start MongoDB, RabbitMQ, and the three Node.js microservices.
 
----
+🔍 How It Works
+User-service manages user data in MongoDB
 
-## 🔍 How It Works
+Task-service creates tasks and publishes "task_created" events to RabbitMQ
 
-- User-service manages user data in MongoDB  
-- Task-service creates tasks and publishes `"task_created"` events to RabbitMQ  
-- Notification-service consumes the `"task_created"` queue and logs notifications  
-- RabbitMQ decouples task creation from notification processing for resilience  
+Notification-service consumes the "task_created" queue and logs notifications
 
----
+RabbitMQ decouples task creation from notification processing for resilience
 
-## 🛠️ Development Tips
+🛠️ Development Tips
+Use service names (mongo, rabbitmq) for inter-service connection strings
 
-- Use service names (`mongo`, `rabbitmq`) for inter-service connection strings  
-- RabbitMQ connection includes retry logic to handle startup race conditions  
-- View RabbitMQ management dashboard at `http://localhost:15672`  
-- Use MongoDB at `mongodb://localhost:27017` by default  
+RabbitMQ connection includes retry logic to handle startup race conditions
 
----
+View RabbitMQ management dashboard at http://localhost:15672
 
-## 🔗 Useful Links
+Use MongoDB at mongodb://localhost:27017 by default
 
-- [RabbitMQ Docs](https://www.rabbitmq.com/documentation.html)  
-- [MongoDB Docs](https://docs.mongodb.com/)  
-- [Docker Docs](https://docs.docker.com/)  
+🔗 Useful Links
+RabbitMQ Docs
 
----
+MongoDB Docs
 
-## 🙋 Author
+Docker Docs
 
-**Chris Robert Yeslin**  
-- 📧 robertchemist2006@gmail.com  
-- [LinkedIn](https://linkedin.com/in/yeslinparker)  
-- [GitHub](https://github.com/yeslinparker)  
+🙋 Author
+Chris Robert Yeslin
 
----
+📧 robertchemist2006@gmail.com
 
-<p align="center">
-  <sub>Made with ❤️ using Docker & RabbitMQ – Level up your backend game!</sub>
-</p>
+LinkedIn
+
+GitHub
+
+<p align="center"> <sub>Made with ❤️ using Docker & RabbitMQ – Level up your backend game!</sub> </p> ```
