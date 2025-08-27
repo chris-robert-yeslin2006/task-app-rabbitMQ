@@ -7,6 +7,7 @@ const app = express();
 app.use(bodyParser.json());
 const port = 3002;
 
+
 mongoose.connect('mongodb://mongo:27017/tasks')
   .then(() => {
     console.log('Connected to MongoDB');
@@ -14,6 +15,7 @@ mongoose.connect('mongodb://mongo:27017/tasks')
   .catch((err) => {
     console.error('MongoDB connection error:', err);
   });
+
 
 const TaskSchema=mongoose.Schema({
     title:String,
@@ -25,6 +27,7 @@ const TaskSchema=mongoose.Schema({
     }
     
 });
+
 const Task=mongoose.model('Task',TaskSchema);
 
 app.post('/tasks',async(req,res)=>{
